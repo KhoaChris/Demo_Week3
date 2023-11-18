@@ -6,17 +6,18 @@ const number8 = document.getElementById("num-8");
 const sumBtn = document.getElementById("sum-btn");
 
 number7.onclick = function () {
-  displayScreen.innerHTML += "7";
+  displayScreen.value += '7';
 };
 
 number8.onclick = function () {
-  displayScreen.innerHTML += "8";
+  displayScreen.value += '8';
 };
 
 sumBtn.onclick = function () {
-  if (displayScreen.innerHTML == '') {
-    displayScreen.innerHTML = "+";
-  } else {
-    displayScreen.innerHTML += "+";
+  if(displayScreen.innerHTML == ''){
+    displayScreen.value = '+';
+  }
+  else{
+    displayScreen.value += '+';
   }
 };
