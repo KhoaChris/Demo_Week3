@@ -1,68 +1,74 @@
 const displayScreen = document.getElementById("display-screen");
 
-const number1 = document.getElementById("num-1");
-const number2 = document.getElementById("num-2");
-const number3 = document.getElementById("num-3");
-const number4 = document.getElementById("num-4");
-const number5 = document.getElementById("num-5");
-const number6 = document.getElementById("num-6");
-const number7 = document.getElementById("num-7");
-const number8 = document.getElementById("num-8");
-const number9 = document.getElementById("num-9");
+const firstRow = document.getElementsByClassName("first-row");
+const secondRow = document.getElementsByClassName("second-row");
+const thirdRow = document.getElementsByClassName("third-row");
+const fourthRow = document.getElementsByClassName("fourth-row");
+const fifthRow = document.getElementsByClassName("fifth-row");
 
-const sumBtn = document.getElementById("sum-btn");
+for (let i = 0; i < firstRow.length; i++) {
+  firstRow[i].onclick = function () {
+    if (firstRow[i].value === "AC") {
+      displayScreen.value = "";
+    } else if (firstRow[i].value === "CE") {
+      displayScreen.value = displayScreen.value.toString().slice(0, -1);
+    } else if (firstRow[i].value === ".") {
+      displayScreen.value += ".";
+    } else if (firstRow[i].value === "÷") {
+      displayScreen.value += "/";
+    }
+  };
+}
 
-number1.onclick = function () {
-  displayScreen.value += '1';
-};
+for (let i = 0; i < secondRow.length; i++) {
+  secondRow[i].onclick = function () {
+    if (secondRow[i].value === "7") {
+      displayScreen.value += "7";
+    } else if (secondRow[i].value === "8") {
+      displayScreen.value += "8";
+    } else if (secondRow[i].value === "9") {
+      displayScreen.value += "9";
+    } else if (secondRow[i].value === "x") {
+      displayScreen.value += "*";
+    }
+  };
+}
 
-number2.onclick = function () {
-  displayScreen.value += '2';
-};
+for (let i = 0; i < thirdRow.length; i++) {
+  thirdRow[i].onclick = function () {
+    if (thirdRow[i].value === "4") {
+      displayScreen.value += "4";
+    } else if (thirdRow[i].value === "5") {
+      displayScreen.value += "5";
+    } else if (thirdRow[i].value === "6") {
+      displayScreen.value += "6";
+    } else if (thirdRow[i].value === "-") {
+      displayScreen.value += "-";
+    }
+  };
+}
 
-number3.onclick = function () {
-  displayScreen.value += '3';
-};
+for (let i = 0; i < fourthRow.length; i++) {
+  fourthRow[i].onclick = function () {
+    if (fourthRow[i].value === "1") {
+      displayScreen.value += "1";
+    } else if (fourthRow[i].value === "2") {
+      displayScreen.value += "2";
+    } else if (fourthRow[i].value === "3") {
+      displayScreen.value += "3";
+    } else if (fourthRow[i].value === "+") {
+      displayScreen.value += "+";
+    }
+  };
+}
 
-number4.onclick = function () {
-  displayScreen.value += '4';
-};
+for (let i = 0; i < fifthRow.length; i++) {
+  fifthRow[i].onclick = function () {
+    if (fifthRow[i].value === "0") {
+      displayScreen.value += "0";
+    } else if (fifthRow[i].value === "=") {
+      displayScreen.value = eval(displayScreen.value);
+    }
+  };
+}
 
-number5.onclick = function () {
-  displayScreen.value += '5';
-};
-
-number6.onclick = function () {
-  displayScreen.value += '6';
-};
-
-number7.onclick = function () {
-  displayScreen.value += '7';
-};
-
-number8.onclick = function () {
-  displayScreen.value += '8';
-};
-
-number9.onclick = function () {
-  displayScreen.value += '9';
-};
-
-sumBtn.onclick = function () {
-  displayScreen.value += '+';
-};
-sumBtn.onclick = function () {
-  displayScreen.value += '+';
-};
-
-sumBtn.onclick = function () {
-  displayScreen.value += '+';
-};
-
-sumBtn.onclick = function () {
-  displayScreen.value += '+';
-};
-
-sumBtn.onclick = function () {
-  displayScreen.value += '+';
-};
